@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# !!WARNING!!
+# THIS SCRIPT MAY CAUSE UNWANTED DATA LOSS ON YOUR SYSTEM.
+# PLEASE MODIFY BEFORE USE.
+
+cfdisk
+mkfs -vt ext4 /dev/sdXX

@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Set SU
+if [ $? -eq 1 ]
+then
+	SU=doas
+else 
+	SU=sudo
+fi
+
 exit_status=0
 
 function check_exit_code() {

@@ -34,3 +34,8 @@ then
 	stop_script "chapter2/2.2-version-check.sh"
 fi
 
+# Set LFS variable
+export LFS=/mnt/lfs
+echo "LFS is $LFS"
+
+

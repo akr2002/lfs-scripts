@@ -121,10 +121,23 @@ PWD=$(pwd)
 echo "Setting Up the Environment"
 su - lfs -c "$PWD/chapter4/4.4-set-up-env.sh"
 
-
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter4/4.4-set-up-env.sh"
 fi
+
+# Chapter 5.2
+# ===========
+echo "Building binutils"
+su - lfs -c "$PWD/chapter5/5.2-binutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter5/5.2-binutils.sh"
+fi
+
+

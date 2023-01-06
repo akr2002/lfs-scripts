@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd $LFS/sources
 tar xf binutils-2.39.tar.xz 
 cd $LFS/sources/binutils-2.39
 

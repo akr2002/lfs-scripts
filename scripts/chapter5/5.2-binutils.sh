@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $LFS/sources/binutils-2.39.tar.xz
+
 mkdir -v build
 cd build
 

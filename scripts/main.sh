@@ -28,6 +28,23 @@ echo "Chapter 2"
 echo "Checking required packages"
 bash ./chapter2/2.2-version-check.sh
 
+echo "Creating filesystem"
+$SU bash ./chapter2/2.5-create-filesystem.sh
+
+echo "Mounting filesystem"
+$SU bash ./chapter2/2.7-mount.sh
+
+
+echo "Chapter 3"
+echo "Downloading sources"
+bash ./chapter3/3.1-sources.sh
+
+
+echo "Chapter 4"
+echo "Creating direcctories"
+$SU bash ./chapter4/4.2-create-dir.sh
+
+
 check_exit_code
 if [ $exit_status -ne 0 ]
 then

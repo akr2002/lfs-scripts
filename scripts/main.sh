@@ -113,6 +113,7 @@ if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter4/4.3-add-user.sh"
 fi
+<<<<<<< HEAD
 
 PWD=$(pwd)
 
@@ -175,5 +176,4 @@ if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter5/5.5-glibc.sh"
 fi
-
 

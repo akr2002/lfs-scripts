@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $LFS/sources
-tar xvf linux-5.19.2.tar.xz
+tar xf linux-5.19.2.tar.xz
 cd linux-5.19.2
 
 make mrproper

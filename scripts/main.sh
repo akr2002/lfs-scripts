@@ -151,3 +151,15 @@ if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter5/5.3-gcc.sh"
 fi
+
+# Chapter 5.4
+# ===========
+echo "Building Linux API Headers"
+su - lfs -c "$PWD/chapter5/5.4-linux-headers.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter5/5.4-linux-headers.sh"
+fi

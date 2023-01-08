@@ -163,3 +163,17 @@ if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter5/5.4-linux-headers.sh"
 fi
+
+# Chapter 5.5
+# ===========
+echo "Building glibc"
+su - lfs -c "$PWD/chapter5/5.5-glibc.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter5/5.5-glibc.sh"
+fi
+
+

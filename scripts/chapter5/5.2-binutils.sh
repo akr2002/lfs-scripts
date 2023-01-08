@@ -28,3 +28,5 @@ fi
 
 make install
 
+cd $LFS/sources
+rm -rf binutils-2.39

@@ -43,3 +43,5 @@ sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd
 
 $LFS/tools/libexec/gcc/$LFS_TGT/12.2.0/install-tools/mkheaders
 
+cd $LFS/sources
+rm -rf glibc-2.36

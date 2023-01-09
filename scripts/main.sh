@@ -296,7 +296,18 @@ su - lfs -c "bash $PWD/chapter6/6.10-grep.sh"
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	exit 1
+	stop_script "chapter6/6.10-grep.sh"
 fi
 
+# Chapter 6.11
+# ============
+echo "Building gzip"
+su - lfs -c "bash $PWD/chapter6/6.11-gzip.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.11-gzip.sh"
+fi
 

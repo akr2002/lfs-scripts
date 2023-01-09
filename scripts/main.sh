@@ -200,6 +200,18 @@ su - lfs -c "bash $PWD/chapter6/6.2-m4.sh"
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter6/6/2-m4.sh"
+	stop_script "chapter6/6.2-m4.sh"
+fi
+
+# Chapter 6.3
+# ===========
+echo "Building ncurses"
+su - lfs -c "bash $PWD/chapter6/6.3-ncurses.sh"
+
+# Exit onn error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.3-ncurses.sh"
 fi
 

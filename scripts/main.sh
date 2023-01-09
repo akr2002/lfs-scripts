@@ -263,3 +263,15 @@ then
 	stop_script "chapter6/6.7-file.sh"
 fi
 
+# Chapter 6.8
+# ===========
+echo "Building findutils"
+su - lfs -c "bash $PWD/chapter6/6.8-findutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.8-findutils.sh"
+fi
+

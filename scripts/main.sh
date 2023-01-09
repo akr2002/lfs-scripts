@@ -177,3 +177,15 @@ then
 	stop_script "chapter5/5.5-glibc.sh"
 fi
 
+# Chapter 5.6
+# ===========
+echo "Building listdc++"
+su - lfs -c "$PWD/chapter5/5.6-libstdc++.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter5/5.6-libstdc++.sh"
+fi
+

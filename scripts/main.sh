@@ -131,6 +131,7 @@ fi
 
 # Chapter 5.2
 # ===========
+echo "Chapter 5"
 echo "Building binutils"
 su - lfs -c "bash $PWD/chapter5/5.2-binutils.sh"
 
@@ -180,12 +181,25 @@ fi
 # Chapter 5.6
 # ===========
 echo "Building listdc++"
-su - lfs -c "$PWD/chapter5/5.6-libstdc++.sh"
+su - lfs -c "bash $PWD/chapter5/5.6-libstdc++.sh"
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter5/5.6-libstdc++.sh"
+fi
+
+# Chapter 6.2
+# ===========
+echo "Chapter 6"
+echo "Building m4"
+su - lfs -c "bash $PWD/chapter6/6.2-m4.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6/2-m4.sh"
 fi
 

@@ -395,3 +395,9 @@ then
 	stop_script "chapter6/6.18-gcc.sh"
 fi
 
+# Chapter 7.2
+# ===========
+echo "Chapter 7"
+echo "Changing ownership to root"
+su -c "bash $PWD/chapter7/7.2-changing-ownership.sh"
+

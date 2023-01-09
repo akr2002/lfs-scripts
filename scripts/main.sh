@@ -347,3 +347,15 @@ then
 	stop_script "chapter6/6.14-sed.sh"
 fi
 
+# Chapter 6.15
+# ============
+echo "Building tar"
+su - lfs -c "bash $PWD/chapter6/6.15-tar.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.15-tar.sh"
+fi
+

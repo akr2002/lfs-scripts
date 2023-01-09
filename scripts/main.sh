@@ -238,4 +238,15 @@ if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter6/6.5-ncurses.sh"
 fi
+# Chapter 6.6
+# ===========
+echo "Building diffutils"
+su - lfs -c "bash $PWD/chapter6/6.6-diffutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.6-diffutils.sh"
+fi
 

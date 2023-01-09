@@ -120,7 +120,7 @@ PWD=$(pwd)
 # Chapter 4.4
 # ===========
 echo "Setting Up the Environment"
-su - lfs -c "$PWD/chapter4/4.4-set-up-env.sh"
+su - lfs -c "bash $PWD/chapter4/4.4-set-up-env.sh"
 
 # Exit on error
 check_exit_code
@@ -132,7 +132,7 @@ fi
 # Chapter 5.2
 # ===========
 echo "Building binutils"
-su - lfs -c "$PWD/chapter5/5.2-binutils.sh"
+su - lfs -c "bash $PWD/chapter5/5.2-binutils.sh"
 
 # Exit on error
 check_exit_code
@@ -144,7 +144,7 @@ fi
 # Chapter 5.3
 # ===========
 echo "Building gcc"
-su - lfs -c "$PWD/chapter5/5.3-gcc.sh"
+su - lfs -c "bash $PWD/chapter5/5.3-gcc.sh"
 
 # Exit on error
 check_exit_code
@@ -156,7 +156,7 @@ fi
 # Chapter 5.4
 # ===========
 echo "Building Linux API Headers"
-su - lfs -c "$PWD/chapter5/5.4-linux-headers.sh"
+su - lfs -c "bash $PWD/chapter5/5.4-linux-headers.sh"
 
 # Exit on error
 check_exit_code
@@ -168,7 +168,7 @@ fi
 # Chapter 5.5
 # ===========
 echo "Building glibc"
-su - lfs -c "$PWD/chapter5/5.5-glibc.sh"
+su - lfs -c "bash $PWD/chapter5/5.5-glibc.sh"
 
 # Exit on error
 check_exit_code

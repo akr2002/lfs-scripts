@@ -215,3 +215,16 @@ then
 	stop_script "chapter6/6.3-ncurses.sh"
 fi
 
+# Chapter 6.4
+# ===========
+echo "Building bash"
+su - lfs -c "bash $PWD/chapter6/6.4-bash.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.4-bash.sh"
+fi
+
+

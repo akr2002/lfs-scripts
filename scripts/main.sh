@@ -371,4 +371,15 @@ then
 	stop_script "chapter6/6.16-xz.sh"
 fi
 
+# Chapter 6.17
+# ============
+echo "Building 6.18"
+su - lfs -c "$PWD/chapter6/6.17-binutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.17-binutils.sh"
+fi
 

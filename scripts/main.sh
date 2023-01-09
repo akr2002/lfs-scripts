@@ -311,3 +311,16 @@ then
 	stop_script "chapter6/6.11-gzip.sh"
 fi
 
+# Chapter 6.12
+# ============
+echo "Building make"
+su - lfs -c "bash $PWD/chapter6/6.12-make.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.12-make.sh"
+fi
+
+

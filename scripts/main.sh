@@ -323,4 +323,15 @@ then
 	stop_script "chapter6/6.12-make.sh"
 fi
 
+# Chapter 6.13
+# ============
+echo "Building patch"
+su - lfs -c "bash $PWD/chapter6/6.13-patch.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.13-patch.sh"
+fi
 

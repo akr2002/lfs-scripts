@@ -287,3 +287,16 @@ then
 	stop_script "chapter6/6.9-gawk.sh"
 fi
 
+# Chapter 6.10
+# ============
+echo "Building grep"
+su - lfs -c "bash $PWD/chapter6/6.10-grep.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	exit 1
+fi
+
+

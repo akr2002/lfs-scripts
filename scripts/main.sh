@@ -359,3 +359,16 @@ then
 	stop_script "chapter6/6.15-tar.sh"
 fi
 
+# Chapter 6.16
+# ============
+echo "Building xz"
+su - lfs -c "bash $PWD/chapter6/6.16-xz.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter6/6.16-xz.sh"
+fi
+
+

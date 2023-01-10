@@ -423,19 +423,34 @@ fi
 # Chapter 7.4
 # ===========
 echo "Entering the Chroot Environment"
-su -c "bash $PWD/chapter7/7.4-enter-chroot.sh"
+#su -c "bash $PWD/chapter7/7.4-enter-chroot.sh"
 
 # Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.4-enter-chroot.sh"
-fi
+# check_exit_code
+# if [ $exit_status -ne 0 ]
+# then
+# 	stop_script "chapter7/7.4-enter-chroot.sh"
+# fi
+
+# If I think it is what it is, then it should not be executed as a child script as it would exit chroot. However, I wouldn't know unless I run it. I will keep it commented for now.
+
+chroot "$LFS" /usr/bin/env -i   \
+    HOME=/root                  \
+    TERM="$TERM"                \
+    PS1='(lfs chroot) \u:\w\$ ' \
+    PATH=/usr/bin:/usr/sbin     \
+    /bin/bash --login
+
+PWD=$(pwd)
+
+# I don't think $PWD is important at this point since the chroot will drop us in $LFS, treated as /. We lost the location of this script. Here's hoping the user puts this repo in $LFS/sources. So much for avoiding hardcoded paths...all goes out the window.
+
+export SCRIPT=/sources/lfs-scripts
 
 # Chapter 7.5
 # ===========
 echo "Creating Directories"
-su -c "bash $PWD/chapter7/7.5-create-dirs.sh"
+bash $SCRIPT/chapter7/7.5-create-dirs.sh 
 
 # Exit on error
 check_exit_code
@@ -447,7 +462,7 @@ fi
 # Chapter 7.6
 # ===========
 echo "Creating Essential Files and Symlinks"
-su -c "bash $PWD/chapter7/7.6-create-files-and-symlinks.sh"
+bash $SCRIPT/chapter7/7.6-create-files-and-symlinks.sh
 
 # Exit on error
 check_exit_code
@@ -459,7 +474,7 @@ fi
 # Chapter 7.7
 # ===========
 echo "Building gettext"
-su -c "bash $PWD/chapter7/7.7-gettext.sh"
+bash $SCRIPT/chapter7/7.7-gettext.sh
 
 # Exit on error
 check_exit_code
@@ -471,7 +486,7 @@ fi
 # Chapter 7.8
 # ===========
 echo "Building bison"
-su -c "bash $PWD/chapter7/7.8-bison.sh"
+bash $SCRIPT/chapter7/7.8-bison.sh
 
 # Exit on error
 check_exit_code
@@ -483,7 +498,7 @@ fi
 # Chapter 7.9
 # ===========
 echo "Building perl"
-su -c "bash $PWD/chapter7/7.9-perl.sh"
+bash $SCRIPT/chapter7/7.9-perl.sh
 
 # Exit on error
 check_exit_code
@@ -496,7 +511,7 @@ fi
 # Chapter 7.10
 # ============
 echo "Building Python"
-su -c "bash $PWD/chapter7/7.10-Python.sh"
+bash $SCRIPT/chapter7/7.10-Python.sh
 
 # Exit on error
 check_exit_code
@@ -508,7 +523,7 @@ fi
 # Chapter 7.11
 # ============
 echo "Building texinfo"
-su -c "bash $PWD/chapter7/7.11-texinfo.sh"
+bash $SCRIPT/chapter7/7.11-texinfo.sh
 
 # Exit on error
 check_exit_code
@@ -520,7 +535,7 @@ fi
 # Chapter 7.12
 # ============
 echo "Building util-linux"
-su -c "bash $PWD/chapter7/7.12-util-linux.sh"
+bash $SCRIPT/chapter7/7.12-util-linux.sh
 
 # Exit on error
 check_exit_code
@@ -528,4 +543,36 @@ if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter7/7.12-util-linux.sh"
 fi
+
+# Chapter 7.13
+# ============
+echo "Creating backup"
+rm -rf /usr/share/{info,man,doc}/*
+find /usr/{lib,libexec} -name \*.la -delete
+rm -rf /tools
+
+# Exit chroot
+exit
+
+# Unmount virtual filesystems
+umount $LFS/dev/pts
+umount $LFS/{sys,proc,run,dev}
+
+# Create backup
+cd $LFS
+tar -cJpf $HOME/lfs-temp-tools-11.2.tar.xz .
+
+# Entering chroot
+echo "Preparing virtual kernel filesystems"
+su -c "bash $PWD/chapter7/7.3-prepare-virtual-fs.sh"
+
+echo "Entering the Chroot Environment"
+chroot "$LFS" /usr/bin/env -i   \
+    HOME=/root                  \
+    TERM="$TERM"                \
+    PS1='(lfs chroot) \u:\w\$ ' \
+    PATH=/usr/bin:/usr/sbin     \
+    /bin/bash --login
+
+export SCRIPT=/sources/lfs-scripts
 

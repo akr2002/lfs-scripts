@@ -480,3 +480,15 @@ then
 	stop_script "chapter7/7.8-bison.sh"
 fi
 
+# Chapter 7.9
+# ===========
+echo "Building perl"
+su -c "bash $PWD/chapter7/7.9-perl.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.9-perl.sh"
+fi
+

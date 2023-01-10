@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $LFS/sources
+cd /sources
 tar xf util-linux-2.38.1.tar.xz
 cd util-linux-2.38.1
 

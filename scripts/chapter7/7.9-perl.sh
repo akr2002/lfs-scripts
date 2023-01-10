@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $LFS/sources
+cd /sources
 tar xf perl-5.36.0.tar.xz
 cd perl-5.36.0
 

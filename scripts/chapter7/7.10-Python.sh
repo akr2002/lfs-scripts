@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $LFS/sources
+cd /sources
 tar xf Python-3.10.6.tar.xz
 cd Python-3.10.6
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $LFS/sources
+cd /sources
 tar xf gettext-0.21.tar.xz
 cd gettext-0.21
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $LFS/sources
+cd /sources
 tar xf texinfo-6.8.tar.xz
 cd texinfo-6.8
 

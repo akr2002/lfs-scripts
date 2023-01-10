@@ -576,3 +576,16 @@ chroot "$LFS" /usr/bin/env -i   \
 
 export SCRIPT=/sources/lfs-scripts
 
+# Chapter 8.3
+# ===========
+echo "Chapter 8"
+echo "Building man-pages"
+su -c "bash $SCRIPT/chapter8/8.3-man-pages.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.3-man-pages.sh"
+fi
+

@@ -444,3 +444,15 @@ then
 	stop_script "chapter7/7.5-create-dirs.sh"
 fi
 
+# Chapter 7.6
+# ===========
+echo "Creating Essential Files and Symlinks"
+su -c "bash $PWD/chapter7/7.6-create-files-and-symlinks.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.6-create-files-and-symlinks.sh"
+fi
+

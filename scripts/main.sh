@@ -517,3 +517,15 @@ then
 	stop_script "chapter7/7.11-texinfo.sh"
 fi
 
+# Chapter 7.12
+# ============
+echo "Building util-linux"
+su -c "bash $PWD/chapter7/7.12-util-linux.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.12-util-linux.sh"
+fi
+

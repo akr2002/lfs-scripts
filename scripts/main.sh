@@ -678,3 +678,15 @@ then
 	stop_script "chapter8/8.11-readline.sh"
 fi
 
+# Chapter 8.12
+# ============
+echo "Building m4"
+su -c "bash $SCRIPT/chapter8/8.12-m4.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.12-m4.sh"
+fi
+

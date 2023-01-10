@@ -432,3 +432,15 @@ then
 	stop_script "chapter7/7.4-enter-chroot.sh"
 fi
 
+# Chapter 7.5
+# ===========
+echo "Creating Directories"
+su -c "bash $PWD/chapter7/7.5-create-dirs.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.5-create-dirs.sh"
+fi
+

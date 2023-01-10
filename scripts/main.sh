@@ -456,3 +456,15 @@ then
 	stop_script "chapter7/7.6-create-files-and-symlinks.sh"
 fi
 
+# Chapter 7.7
+# ===========
+echo "Building gettext"
+su -c "bash $PWD/chapter7/7.7-gettext.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.7-gettext.sh"
+fi
+

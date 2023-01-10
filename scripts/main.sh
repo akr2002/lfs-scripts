@@ -666,4 +666,15 @@ then
 	stop_script "chapter8/8.10-file.sh"
 fi
 
+# Chapter 8.11
+# ============
+echo "Building readline"
+su -c "bash $SCRIPT/chapter8/8.11-readline.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.11-readline.sh"
+fi
 

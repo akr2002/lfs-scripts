@@ -505,3 +505,15 @@ then
 	stop_script "chapter7/7.10-Python.sh"
 fi
 
+# Chapter 7.11
+# ============
+echo "Building texinfo"
+su -c "bash $PWD/chapter7/7.11-texinfo.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.11-texinfo.sh"
+fi
+

@@ -738,3 +738,15 @@ then
 	exit 1
 fi
 
+# Chapter 8.17
+# ============
+echo "Building dejagnu"
+su -c "bash $SCRIPT/chapter8/8.17-dejagnu.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.17-dejagnu.sh"
+fi
+

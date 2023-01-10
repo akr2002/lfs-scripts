@@ -606,4 +606,15 @@ then
 	stop_script "chapter8/8.5-glibc.sh"
 fi
 
+# Chapter 8.6
+# ===========
+echo "Building zlib"
+su -c "bash $SCRIPT/chapter8/8.6-zlib.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.6-zlib.sh"
+fi
 

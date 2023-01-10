@@ -468,3 +468,15 @@ then
 	stop_script "chapter7/7.7-gettext.sh"
 fi
 
+# Chapter 7.8
+# ===========
+echo "Building bison"
+su -c "bash $PWD/chapter7/7.8-bison.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.8-bison.sh"
+fi
+

@@ -702,3 +702,15 @@ then
 	stop_script "chapter8/8.13-bc.sh"
 fi
 
+# Chapter 8.14
+# ============
+echo "Building flex"
+su -c "bash $SCRIPT/chapter8/8.14-flex.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.14-flex.sh"
+fi
+

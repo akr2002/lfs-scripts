@@ -492,3 +492,16 @@ then
 	stop_script "chapter7/7.9-perl.sh"
 fi
 
+
+# Chapter 7.10
+# ============
+echo "Building Python"
+su -c "bash $PWD/chapter7/7.10-Python.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.10-Python.sh"
+fi
+

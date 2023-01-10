@@ -420,3 +420,15 @@ then
 	stop_script "chapter7/7.3-prepare-virtual-fs.sh"
 fi
 
+# Chapter 7.4
+# ===========
+echo "Entering the Chroot Environment"
+su -c "bash $PWD/chapter7/7.4-enter-chroot.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter7/7.4-enter-chroot.sh"
+fi
+

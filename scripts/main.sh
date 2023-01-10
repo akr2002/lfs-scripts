@@ -589,3 +589,9 @@ then
 	stop_script "chapter8/8.3-man-pages.sh"
 fi
 
+# Chapter 8.4
+# ===========
+echo "Building iana-etc"
+su -c "bash $SCRIPT/chapter8/8.4-iana-etc.sh"
+
+

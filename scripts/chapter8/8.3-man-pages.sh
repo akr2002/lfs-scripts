@@ -11,3 +11,6 @@ then
   exit 1
 fi
 
+cd /sources
+rm -rf man-pages-5.13
+

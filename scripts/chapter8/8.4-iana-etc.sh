@@ -6,3 +6,6 @@ cd iana-etc-20220812
 
 cp services protocols /etc
 
+cd /sources
+rm -rf iana-etc-20220812
+

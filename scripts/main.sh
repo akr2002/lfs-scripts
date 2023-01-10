@@ -594,4 +594,16 @@ fi
 echo "Building iana-etc"
 su -c "bash $SCRIPT/chapter8/8.4-iana-etc.sh"
 
+# Chapter 8.5
+# ===========
+echo "Building glibc"
+su -c "bash $SCRIPT/chapter8/8.5-glibc.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.5-glibc.sh"
+fi
+
 

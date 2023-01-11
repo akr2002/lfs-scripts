@@ -750,3 +750,16 @@ then
 	stop_script "chapter8/8.17-dejagnu.sh"
 fi
 
+# Chapter 8.18
+# ============
+echo "Building binutils"
+su -c "bash $SCRIPT/chapter8/8.18-binutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.18-binutils.sh"
+fi
+
+

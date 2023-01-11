@@ -822,3 +822,15 @@ then
 	stop_script "chapter8/8.23-acl.sh"
 fi
 
+# Chapter 8.24
+# ============
+echo "Building libcap"
+su -c "bash $SCRIPT/chapter8/8.24-libcap.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.24-libcap.sh"
+fi
+

@@ -869,3 +869,15 @@ then
 	stop_script "chapter8/8.27-pkg-config.sh"
 fi
 
+# Chapter 8.28
+# ============
+echo "Building ncurses"
+su -c "bash $SCRIPT/chapter8/8/28-ncurses.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.28-ncurses.sh"
+fi
+

@@ -930,3 +930,15 @@ then
 	stop_script "chapter8/8.32-bison.sh"
 fi
 
+# Chapter 8.33
+# ============
+echo "Building grep"
+su -c "bash $SCRIPT/chapter8/8.33-grep.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.33-grep.sh"
+fi
+

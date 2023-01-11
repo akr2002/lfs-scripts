@@ -786,3 +786,15 @@ then
 	stop_script "chapter8/8.20-mpfr.sh"
 fi
 
+# Chapter 8.21
+# ============
+echo "Building MPC"
+su -c "bash $SCRIPT/chapter8/8.21-mpc.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.21-mpc.sh"
+fi
+

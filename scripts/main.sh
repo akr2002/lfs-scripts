@@ -942,3 +942,15 @@ then
 	stop_script "chapter8/8.33-grep.sh"
 fi
 
+# Chapter 8.34
+# ============
+echo "Building bash"
+su -c "bash $SCRIPT/chapter8/8.34-bash.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.34-bash.sh"
+fi
+

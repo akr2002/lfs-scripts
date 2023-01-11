@@ -762,4 +762,15 @@ then
 	stop_script "chapter8/8.18-binutils.sh"
 fi
 
+# Chapter 8.19
+# ============
+echo "Building GMP"
+su -c "bash $SCRIPT/chapter8/8.19-gmp.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.19-gmp.sh"
+fi
 

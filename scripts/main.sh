@@ -810,3 +810,15 @@ then
 	stop_script "chapter8/8.22-attr.sh"
 fi
 
+# Chapter 8.23
+# ============
+echo "Building acl"
+su -c "bash $SCRIPT/chapter8/8.23-acl.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.23-acl.sh"
+fi
+

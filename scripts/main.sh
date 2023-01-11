@@ -906,3 +906,15 @@ then
 	stop_script "chapter8/8.30-psmisc.sh"
 fi
 
+# Chapter 8.31
+# ============
+echo "Building gettext"
+su -c "bash $SCRIPT/chapter8/8.31-gettext.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.31-gettext.sh"
+fi
+

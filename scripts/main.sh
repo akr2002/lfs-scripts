@@ -894,3 +894,15 @@ then
 	stop_script "chapter8/8.29-sed.sh"
 fi
 
+# Chapter 8.30
+# ============
+echo "Building psmisc"
+su -c "bash $SCRIPT/chapter8/8.30-psmisc.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.30-psmisc.sh"
+fi
+

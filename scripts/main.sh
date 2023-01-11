@@ -834,3 +834,15 @@ then
 	stop_script "chapter8/8.24-libcap.sh"
 fi
 
+# Chapter 8.25
+# ============
+echo "Building shadow"
+su -c "bash $SCRIPT/chapter8/8.25-shadow.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.25-shadow.sh"
+fi
+

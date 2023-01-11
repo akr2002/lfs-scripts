@@ -918,3 +918,15 @@ then
 	stop_script "chapter8/8.31-gettext.sh"
 fi
 
+# Chapter 8.32
+# ============
+echo "Building bison"
+su -c "bash $SCRIPT/chapter8/8.32-bison.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.32-bison.sh"
+fi
+

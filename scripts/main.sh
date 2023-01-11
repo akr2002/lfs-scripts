@@ -774,3 +774,15 @@ then
 	stop_script "chapter8/8.19-gmp.sh"
 fi
 
+# Chapter 8.20
+# ============
+echo "Building MPFR"
+su -c "bash $SCRIPT/chapter8/8.20-mpfr.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.20-mpfr.sh"
+fi
+

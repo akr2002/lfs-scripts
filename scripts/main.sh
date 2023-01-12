@@ -978,3 +978,15 @@ then
 	stop_script "chapter8/8.36-gdbm.sh"
 fi
 
+# Chapter 8.37
+# ============
+echo "Building gperf"
+su -c "bash $SCRIPT/chapter8/8.37-gperf.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.37-gperf.sh"
+fi
+

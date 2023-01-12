@@ -1342,3 +1342,15 @@ then
 	stop_script "chapter8/8.66-patch.sh"
 fi
 
+# Chapter 8.67
+# ============
+echo "Building tar"
+su -c "bash $SCRIPT/chapter8/8.67-tar.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	exit 1
+fi
+

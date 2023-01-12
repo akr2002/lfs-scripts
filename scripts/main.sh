@@ -1414,3 +1414,15 @@ then
 	stop_script "chapter8/8.72-procps-ng.sh"
 fi
 
+# Chapter 8.73
+# ============
+echo "Building util-linux"
+su -c "bash $SCRIPT/chapter8/8.73-util-linux.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.73-util-linux.sh"
+fi
+

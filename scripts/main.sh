@@ -966,3 +966,15 @@ then
 	stop_script "chapter8/8.35-libtool.sh"
 fi
 
+# Chapter 8.36
+# ============
+echo "Building GDBM"
+su -c "bash $SCRIPT/chapter8/8.36-gdbm.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.36-gdbm.sh"
+fi
+

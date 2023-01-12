@@ -1234,3 +1234,15 @@ then
 	stop_script "chapter8/8.57-gawk.sh"
 fi
 
+# Chapter 8.58
+# ============
+echo "Building findutils"
+su -c "bash $SCRIPT/chapter8/8.58-findutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.58-findutils.sh"
+fi
+

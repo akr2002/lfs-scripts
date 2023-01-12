@@ -1019,3 +1019,15 @@ then
 	stop_script "chapter8/8.39-inetutils.sh"
 fi
 
+# Chapter 8.40
+# ============
+echo "Building less"
+su -c "bash $SCRIPT/chapter8/8.40-less.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.40-less.sh"
+fi
+

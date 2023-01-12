@@ -1354,3 +1354,15 @@ then
 	exit 1
 fi
 
+# Chapter 8.68
+# ============
+echo "Building texinfo"
+su -c "bash $SCRIPT/chapter8/8.68-texinfo.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.68-texinfo.sh"
+fi
+

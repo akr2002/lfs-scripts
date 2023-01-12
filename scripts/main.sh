@@ -1366,3 +1366,15 @@ then
 	stop_script "chapter8/8.68-texinfo.sh"
 fi
 
+# Chapter 8.69
+# ============
+echo "Building vim"
+su -c "bash $SCRIPT/chapter8/8.69-vim.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	exit 1
+fi
+

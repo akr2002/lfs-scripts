@@ -954,3 +954,15 @@ then
 	stop_script "chapter8/8.34-bash.sh"
 fi
 
+# Chapter 8.35
+# ============
+echo "Building libtool"
+su -c "bash $SCRIPT/chapter8/8.35-libtool.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.35-libtool.sh"
+fi
+

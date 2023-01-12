@@ -1246,3 +1246,15 @@ then
 	stop_script "chapter8/8.58-findutils.sh"
 fi
 
+# Chapter 8.59
+# ============
+echo "Building groff"
+su -c "bash $SCRIPT/chapter8/8.59-groff.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.59-groff.sh"
+fi
+

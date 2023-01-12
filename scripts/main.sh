@@ -1222,3 +1222,15 @@ then
 	stop_script "chapter8/8.56-diffutils.sh"
 fi
 
+# Chapter 8.57
+# ============
+echo "Building gawk"
+su -c "bash $SCRIPT/chapter8/8.57-gawk.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.57-gawk.sh"
+fi
+

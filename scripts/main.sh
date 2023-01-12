@@ -1115,3 +1115,15 @@ then
 	stop_script "chapter8/8.47-kmod.sh"
 fi
 
+# Chapter 8.48
+# ============
+echo "Building libelf"
+su -c "bash $SCRIPT/chapter8/8.48-libelf.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.48-libelf.sh"
+fi
+

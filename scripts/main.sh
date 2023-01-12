@@ -1318,3 +1318,15 @@ then
 	stop_script "chapter8/8.64-libpipeline.sh"
 fi
 
+# Chapter 8.65
+# ============
+echo "Building make"
+su -c "bash $SCRIPT/chapter8/8.65-make.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.65-make.sh"
+fi
+

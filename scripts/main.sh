@@ -1162,3 +1162,15 @@ then
 	stop_script "chapter8/8.51-wheel.sh"
 fi
 
+# Chapter 8.52
+# ============
+echo "Building ninja"
+su -c "bash $SCRIPT/chapter8/8.52-ninja.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.52-ninja.sh"
+fi
+

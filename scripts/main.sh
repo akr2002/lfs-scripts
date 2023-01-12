@@ -1055,3 +1055,15 @@ then
 	stop_script "chapter8/8.42-xml-parser.sh"
 fi
 
+# Chapter 8.43
+# ============
+echo "Building intltool"
+su -c "bash $SCRIPT/chapter8/8.43-intltool.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.43-intltool.sh"
+fi
+

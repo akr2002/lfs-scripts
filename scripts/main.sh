@@ -1079,3 +1079,15 @@ then
 	stop_script "chapter8/8.44-autoconf.sh"
 fi
 
+# Chapter 8.45
+# ============
+echo "Building automake"
+su -c "bash $SCRIPT/chapter8/8.45-automake.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.45-automake.sh"
+fi
+

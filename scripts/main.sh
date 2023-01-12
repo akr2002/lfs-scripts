@@ -1002,3 +1002,20 @@ then
 	stop_script "chapter8/8.38-expat.sh"
 fi
 
+# A thousand lines already
+# But I know it won't work
+# for I know the flaws in my ways
+# Why am I still doing it?
+
+# Chapter 8.39
+# ============
+echo "Building inetutils"
+su -c "bash $SCRIPT/chapter8/8.39-inetutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.39-inetutils.sh"
+fi
+

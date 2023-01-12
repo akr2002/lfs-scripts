@@ -1091,3 +1091,15 @@ then
 	stop_script "chapter8/8.45-automake.sh"
 fi
 
+# Chapter 8.46
+# ============
+echo "Building openssl"
+su -c "bash $SCRIPT/chapter8/8.45-openssl.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	exit 1
+fi
+

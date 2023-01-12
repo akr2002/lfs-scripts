@@ -990,3 +990,15 @@ then
 	stop_script "chapter8/8.37-gperf.sh"
 fi
 
+# Chapter 8.38
+# ============
+echo "Building expat"
+su -c "bash $SCRIPT/chapter8/8.38-expat.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.38-expat.sh"
+fi
+

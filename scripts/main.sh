@@ -1378,3 +1378,15 @@ then
 	exit 1
 fi
 
+# Chapter 8.70
+# ============
+echo "Building eudev"
+su -c "bash $SCRIPT/chapter8/8.70-eudev.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.70-eudev.sh"
+fi
+

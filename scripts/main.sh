@@ -1306,3 +1306,15 @@ then
 	stop_script "chapter8/8.63-kbd"
 fi
 
+# Chapter 8.64
+# ============
+echo "Building libpipeline"
+su -c "bash $SCRIPT/chapter8/8.64-libpipeline.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.64-libpipeline.sh"
+fi
+

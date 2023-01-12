@@ -1067,3 +1067,15 @@ then
 	stop_script "chapter8/8.43-intltool.sh"
 fi
 
+# Chapter 8.44
+# ============
+echo "Building autoconf"
+su -c "bash $SCRIPT/8.44-autoconf.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.44-autoconf.sh"
+fi
+

@@ -1426,3 +1426,15 @@ then
 	stop_script "chapter8/8.73-util-linux.sh"
 fi
 
+# Chapter 8.74
+# ============
+echo "Building e2fsprogs"
+su -c "bash $SCRIPT/chapter8/8.74-e2fsprogs.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.74-e2fsprogs.sh"
+fi
+

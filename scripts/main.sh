@@ -1031,3 +1031,15 @@ then
 	stop_script "chapter8/8.40-less.sh"
 fi
 
+# Chapter 8.41
+# ============
+echo "Building perl"
+su -c "bash $SCRIPT/chapter8/8.41-perl.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.41-perl.sh"
+fi
+

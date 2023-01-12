@@ -1270,3 +1270,15 @@ then
 	stop_script "chapter8/8.60-bash.sh"
 fi
 
+# Chapter 8.61
+# ============
+echo "Building gzip"
+su -c "bash $SCRIPT/chapte8/8.61-gzip.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapte8/8.61-gzip.sh"
+fi
+

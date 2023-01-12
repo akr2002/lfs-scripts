@@ -1402,3 +1402,15 @@ then
 	stop_script "chapter8/8.71-man-db.sh"
 fi
 
+# Chapter 8.72
+# ============
+echo "Building procps-ng"
+su -c "bash $SCRIPT/chapter8/8.72-procps-ng.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.72-procps-ng.sh"
+fi
+

@@ -1174,3 +1174,15 @@ then
 	stop_script "chapter8/8.52-ninja.sh"
 fi
 
+# Chapter 8.53
+# ============
+echo "Building meson"
+su -c "bash $SCRIPT/chapter8/8.53-meson.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.53-meson.sh"
+fi
+

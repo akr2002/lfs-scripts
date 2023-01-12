@@ -1198,3 +1198,27 @@ then
 	stop_script "bash $SCRIPT/chapter8/8.54-coreutils.sh"
 fi
 
+# Chapter 8.55
+# ============
+echo "Building check"
+su -c "bash $SCRIPT/chapte8/8.55-check.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.55-check.sh"
+fi
+
+# Chapter 8.56
+# ============
+echo "Building diffutils"
+su -c "bash $SCRIPT/chapter8/8.56-diffutils.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.56-diffutils.sh"
+fi
+

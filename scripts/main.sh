@@ -1584,3 +1584,25 @@ then
 	stop_script "chapter10/10.4-grub.sh"
 fi
 
+# Chapter 11.1
+# ============
+echo "Chapter 11"
+echo "Finishing up"
+
+echo 11.2 > /etc/lfs-release
+
+cat > /etc/lsb-release << "EOF"
+DISTRIB_ID="Linux From Scratch"
+DISTRIB_RELEASE="11.2"
+DISTRIB_CODENAME="summer2023"
+DISTRIB_DESCRIPTION="Linux From Scratch"
+EOF
+
+cat > /etc/os-release << "EOF"
+NAME="Linux From Scratch"
+VERSION="11.2"
+ID=lfs
+PRETTY_NAME="Linux From Scratch 11.2"
+VERSION_CODENAME="summer2023"
+EOF
+

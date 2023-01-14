@@ -1606,3 +1606,14 @@ PRETTY_NAME="Linux From Scratch 11.2"
 VERSION_CODENAME="summer2023"
 EOF
 
+# Exit chroot
+logout
+
+# Unmount filesystems
+umount -v $LFS/dev/pts
+umount -v $LFS/dev
+umount -v $LFS/run
+umount -v $LFS/proc
+umount -v $LFS/sys
+umount -v $LFS
+

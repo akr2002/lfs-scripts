@@ -1535,3 +1535,15 @@ then
 	stop_script "chapter9/9.8-inputrc.sh"
 fi
 
+# Chapter 9.9
+# ===========
+echo "Creating /etc/shells"
+su -c "bash $SCRIPT/chapter9/9.9-shells.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter9/9.9-shells.sh"
+fi
+

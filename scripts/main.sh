@@ -1474,3 +1474,15 @@ then
 	stop_script "chapter8/8.78-stripping.sh"
 fi
 
+# Chapter 8.79
+# ============
+echo "Cleaning up extra files"
+su -c "bash $SCRIPT/chapter8/8.79-cleanup.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.79-cleanup.sh"
+fi
+

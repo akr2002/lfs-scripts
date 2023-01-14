@@ -1201,7 +1201,7 @@ fi
 # Chapter 8.55
 # ============
 echo "Building check"
-su -c "bash $SCRIPT/chapte8/8.55-check.sh"
+su -c "bash $SCRIPT/chapter8/8.55-check.sh"
 
 # Exit on error
 check_exit_code

@@ -1547,3 +1547,16 @@ then
 	stop_script "chapter9/9.9-shells.sh"
 fi
 
+# Chapter 10.2
+# ============
+echo "Chapter 10"
+echo "Creating /etc/fstab"
+su -c "bash $SCRIPT/chapter10/10.2-fstab.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter10/10.2-fstab.sh"
+fi
+

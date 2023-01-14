@@ -1437,15 +1437,28 @@ if [ $exit_status -ne 0 ]
 then
 	stop_script "chapter8/8.74-e2fsprogs.sh"
 fi
- # chapter8.75
- # ===========
- echo "Building sysklogd"
- su -c "bash $SCRIPT/chapter8/8.75-sysklogd.sh"
 
- # Exit on error
- check_exit_code
- if [ $exit_status -ne 0 ]
- then
- 	 stop_script "chapter8/8.75-sysklogd.sh"
- fi
+# chapter8.75
+# ===========
+echo "Building sysklogd"
+su -c "bash $SCRIPT/chapter8/8.75-sysklogd.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+ stop_script "chapter8/8.75-sysklogd.sh"
+fi
+
+# Chapter 8.76
+# ============
+echo "Building sysvinit"
+su -c "bash $SCRIPT/chapter8/8.76-sysvinit.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.76-sysvinit.sh"
+fi
 

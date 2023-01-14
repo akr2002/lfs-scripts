@@ -1560,3 +1560,15 @@ then
 	stop_script "chapter10/10.2-fstab.sh"
 fi
 
+# Chapter 10.3
+# ============
+echo "Building kernel"
+su -c "bash $SCRIPT/chapter10/10.3-kernel.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter10/10.3-kernel.sh"
+fi
+

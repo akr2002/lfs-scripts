@@ -1610,10 +1610,10 @@ EOF
 logout
 
 # Unmount filesystems
-umount -v $LFS/dev/pts
-umount -v $LFS/dev
-umount -v $LFS/run
-umount -v $LFS/proc
-umount -v $LFS/sys
-umount -v $LFS
+su -c "umount -v $LFS/dev/pts"
+su -c "umount -v $LFS/dev"
+su -c "umount -v $LFS/run"
+su -c "umount -v $LFS/proc"
+su -c "umount -v $LFS/sys"
+su -c "umount -v $LFS"
 

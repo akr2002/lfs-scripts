@@ -1486,3 +1486,16 @@ then
 	stop_script "chapter8/8.79-cleanup.sh"
 fi
 
+# Chapter 9.2
+# ===========
+echo "Chapter 9"
+echo "Installing LFS bootscripts"
+su -c "SCRIPT/chapter9/9.2-lfs-bootscripts.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter9/9.2-lfs-bootscripts.sh"
+fi
+

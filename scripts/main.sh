@@ -1572,3 +1572,15 @@ then
 	stop_script "chapter10/10.3-kernel.sh"
 fi
 
+# Chapter 10.4
+# ============
+echo "Installng grub"
+su -c "bash $SCRIPT/chapter10/10.4-grub.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter10/10.4-grub.sh"
+fi
+

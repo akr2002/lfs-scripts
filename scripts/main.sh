@@ -1462,3 +1462,15 @@ then
 	stop_script "chapter8/8.76-sysvinit.sh"
 fi
 
+# Chapter 8.78
+# ============
+echo "Stripping debug symbols"
+su -c "bash $SCRIPT/chapter8/8.78-stripping.sh"
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "chapter8/8.78-stripping.sh"
+fi
+

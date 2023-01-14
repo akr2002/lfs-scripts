@@ -9,6 +9,7 @@ Edit
 - scripts/chapter2/2.2-create-filesystem.sh
 - scripts/chapter2/2.7-mount.sh 
 - scripts/chapter10/10.2-fstab.sh
+- scripts/chapter10/10.4-grub.sh
 
 before use
 

@@ -201,41 +201,16 @@ then
 	stop_script "Stopped in chapter 9"
 fi
 
-# Chapter 10.2
-# ============
+# Chapter 10
+# ==========
 echo "Chapter 10"
-echo "Creating /etc/fstab"
-su -c "bash $SCRIPT/chapter10/10.2-fstab.sh"
+bash ./chapter10/main.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter10/10.2-fstab.sh"
-fi
-
-# Chapter 10.3
-# ============
-echo "Building kernel"
-su -c "bash $SCRIPT/chapter10/10.3-kernel.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter10/10.3-kernel.sh"
-fi
-
-# Chapter 10.4
-# ============
-echo "Installng grub"
-su -c "bash $SCRIPT/chapter10/10.4-grub.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter10/10.4-grub.sh"
+	stop_script "Stopped in chapter 10"
 fi
 
 # Chapter 11.1

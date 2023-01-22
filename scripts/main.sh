@@ -189,65 +189,16 @@ then
 	stop_script "Stopped in chapter 8"
 fi
 
-# Chapter 9.2
-# ===========
+# Chapter 9
+# =========
 echo "Chapter 9"
-echo "Installing LFS bootscripts"
-su -c "SCRIPT/chapter9/9.2-lfs-bootscripts.sh"
+bash ./chapter9/main.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter9/9.2-lfs-bootscripts.sh"
-fi
-
-# Chapter 9.6
-# ===========
-echo "Configuring sysvinit"
-su -c "bash $SCRIPT/chapter9/9.6-configure-sysvinit.sh"
-
-# Exit on error
-check_exit_code
-if  [ $exit_status -ne 0 ]
-then
-	stop_script "chapter9/9.6-configure-sysvinit.sh"
-fi
-
-# Chapter 9.7
-# ===========
-echo "Configurintg shell startup files"
-su -c "bash $SCRIPT/chapter9/9.7-shell-startup.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter9/9.7-shell-startup.sh"
-fi
-
-# Chapter 9.8
-# ===========
-echo "Creating /etc/inputrc"
-su -c "bash $SCRIPT/chapter9/9.8-inputrc.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter9/9.8-inputrc.sh"
-fi
-
-# Chapter 9.9
-# ===========
-echo "Creating /etc/shells"
-su -c "bash $SCRIPT/chapter9/9.9-shells.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter9/9.9-shells.sh"
+	stop_script "Stopped in chapter 9"
 fi
 
 # Chapter 10.2

@@ -32,46 +32,20 @@ function stop_script() {
 # Chapter 2
 # =========
 echo "Chapter 2"
-echo "Checking required packages"
-bash ./chapter2/2.2-version-check.sh
+bash ./chapter2/main.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter2/2.2-version-check.sh"
+	stop_script "chapter3/3.1-sources.sh"
 fi
-
 
 # Set LFS variable
 # ================
 export LFS=/mnt/lfs
 echo "LFS is $LFS"
 
-# Chapter 2.5
-# ===========
-echo "Creating filesystem"
-su -c "bash ./chapter2/2.5-create-filesystem.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter2/2.5-create-filesystem.sh"
-fi
-
-
-# Chapter 2.7
-# ===========
-echo "Mounting filesystem"
-su -c "bash ./chapter2/2.7-mount.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter2/2.7-mount.sh"
-fi
 
 
 # Chapter 3

@@ -71,8 +71,8 @@ then
 	stop_script "Stopped in chapter 4"
 fi
 
-# Chapter 5.2
-# ===========
+# Chapter 5
+# =========
 echo "Chapter 5"
 bash ./chapter5/main.sh
 

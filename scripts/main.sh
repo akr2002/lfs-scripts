@@ -62,42 +62,13 @@ fi
 # Chapter 4
 # =========
 echo "Chapter 4"
-echo "Creating direcctories"
-su -c "bash ./chapter4/4.2-create-dir.sh"
+bash ./chapter4/main.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter4/4.2-create-dir.sh"
-fi
-
-
-# Chapter 4.3
-# =========== 
-echo "Adding LFS user"
-su -c "bash ./chapter4/4.3-add-user.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter4/4.3-add-user.sh"
-fi
-<<<<<<< HEAD
-
-PWD=$(pwd)
-
-# Chapter 4.4
-# ===========
-echo "Setting Up the Environment"
-su - lfs -c "bash $PWD/chapter4/4.4-set-up-env.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter4/4.4-set-up-env.sh"
+	stop_script "Stopped in chapter 4"
 fi
 
 # Chapter 5.2

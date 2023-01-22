@@ -38,7 +38,7 @@ bash ./chapter2/main.sh
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter3/3.1-sources.sh"
+	stop_script "Stopped in chapter 2"
 fi
 
 # Set LFS variable

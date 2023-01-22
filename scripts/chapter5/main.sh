@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PWD=$(pwd)
+
 # Exit on error
 # =============
 exit_status=0

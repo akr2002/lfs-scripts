@@ -47,20 +47,17 @@ export LFS=/mnt/lfs
 echo "LFS is $LFS"
 
 
-
 # Chapter 3
 # =========
 echo "Chapter 3"
-echo "Downloading sources"
-bash ./chapter3/3.1-sources.sh
+bash ./chapter3/main.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter3/3.1-sources.sh"
+	stop_script "Stopped in chapter 3"
 fi
-
 
 # Chapter 4
 # =========

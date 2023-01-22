@@ -83,234 +83,28 @@ then
 	stop_script "Stopped in chapter 5"
 fi
 
-# Chapter 6.2
-# ===========
+# Chapter 6
+# =========
 echo "Chapter 6"
-echo "Building m4"
-su - lfs -c "bash $PWD/chapter6/6.2-m4.sh"
+bash ./chapter6/main.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter6/6.2-m4.sh"
-fi
-
-# Chapter 6.3
-# ===========
-echo "Building ncurses"
-su - lfs -c "bash $PWD/chapter6/6.3-ncurses.sh"
-
-# Exit onn error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.3-ncurses.sh"
-fi
-
-# Chapter 6.4
-# ===========
-echo "Building bash"
-su - lfs -c "bash $PWD/chapter6/6.4-bash.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.4-bash.sh"
-fi
-
-# Chapter 6.5
-# ===========
-echo "Building coreutils"
-su - lfs -c "bash $PWD/chapter6/6.5-coreutils.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.5-ncurses.sh"
-fi
-
-# Chapter 6.6
-# ===========
-echo "Building diffutils"
-su - lfs -c "bash $PWD/chapter6/6.6-diffutils.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.6-diffutils.sh"
-fi
-
-# Chapter 6.7
-# ===========
-echo "Building file"
-su - lfs -c "bash $PWD/chapter6/6.7-file.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.7-file.sh"
-fi
-
-# Chapter 6.8
-# ===========
-echo "Building findutils"
-su - lfs -c "bash $PWD/chapter6/6.8-findutils.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.8-findutils.sh"
-fi
-
-# Chapter 6.9
-# ===========
-echo "Building gawk"
-su - lfs -c "bash $PWD/chapter6/6.9-gawk.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.9-gawk.sh"
-fi
-
-# Chapter 6.10
-# ============
-echo "Building grep"
-su - lfs -c "bash $PWD/chapter6/6.10-grep.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.10-grep.sh"
-fi
-
-# Chapter 6.11
-# ============
-echo "Building gzip"
-su - lfs -c "bash $PWD/chapter6/6.11-gzip.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.11-gzip.sh"
-fi
-
-# Chapter 6.12
-# ============
-echo "Building make"
-su - lfs -c "bash $PWD/chapter6/6.12-make.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.12-make.sh"
-fi
-
-# Chapter 6.13
-# ============
-echo "Building patch"
-su - lfs -c "bash $PWD/chapter6/6.13-patch.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.13-patch.sh"
-fi
-
-# Chapter 6.14
-# ============
-echo "Building sed"
-su - lfs -c "bash $PWD/chapter6/6.14-sed.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.14-sed.sh"
-fi
-
-# Chapter 6.15
-# ============
-echo "Building tar"
-su - lfs -c "bash $PWD/chapter6/6.15-tar.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.15-tar.sh"
-fi
-
-# Chapter 6.16
-# ============
-echo "Building xz"
-su - lfs -c "bash $PWD/chapter6/6.16-xz.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.16-xz.sh"
-fi
-
-# Chapter 6.17
-# ============
-echo "Building binutils pass 2"
-su - lfs -c "bash $PWD/chapter6/6.17-binutils.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.17-binutils.sh"
-fi
-
-# Chapter 6.18
-# ============
-echo "Building gcc pass 2"
-su - lfs -c "bash $PWD/chapter6/6.18-gcc.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter6/6.18-gcc.sh"
+	stop_script "Stopped in chapter 6"
 fi
 
 # Chapter 7.2
 # ===========
 echo "Chapter 7"
-echo "Changing ownership to root"
-su -c "bash $PWD/chapter7/7.2-changing-ownership.sh"
+bash ./chapter7/main-prechroot.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter7/7.2-changing-ownership.sh"
-fi
-
-# Chapter 7.3
-# ===========
-echo "Preparing virtual kernel filesystems"
-su -c "bash $PWD/chapter7/7.3-prepare-virtual-fs.sh"
-
-# Exit on error 
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.3-prepare-virtual-fs.sh"
+	stop_script "Stopped in chapter 7"
 fi
 
 # Chapter 7.4
@@ -342,110 +136,24 @@ export SCRIPT=/sources/lfs-scripts
 
 # Chapter 7.5
 # ===========
-echo "Creating Directories"
-bash $SCRIPT/chapter7/7.5-create-dirs.sh 
+bash ./chapter7/main-postchroot.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter7/7.5-create-dirs.sh"
+	stop_script "Stopped in chapter 7, post chroot"
 fi
-
-# Chapter 7.6
-# ===========
-echo "Creating Essential Files and Symlinks"
-bash $SCRIPT/chapter7/7.6-create-files-and-symlinks.sh
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.6-create-files-and-symlinks.sh"
-fi
-
-# Chapter 7.7
-# ===========
-echo "Building gettext"
-bash $SCRIPT/chapter7/7.7-gettext.sh
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.7-gettext.sh"
-fi
-
-# Chapter 7.8
-# ===========
-echo "Building bison"
-bash $SCRIPT/chapter7/7.8-bison.sh
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.8-bison.sh"
-fi
-
-# Chapter 7.9
-# ===========
-echo "Building perl"
-bash $SCRIPT/chapter7/7.9-perl.sh
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.9-perl.sh"
-fi
-
-
-# Chapter 7.10
-# ============
-echo "Building Python"
-bash $SCRIPT/chapter7/7.10-Python.sh
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.10-Python.sh"
-fi
-
-# Chapter 7.11
-# ============
-echo "Building texinfo"
-bash $SCRIPT/chapter7/7.11-texinfo.sh
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.11-texinfo.sh"
-fi
-
-# Chapter 7.12
-# ============
-echo "Building util-linux"
-bash $SCRIPT/chapter7/7.12-util-linux.sh
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter7/7.12-util-linux.sh"
-fi
-
-# Chapter 7.13
-# ============
-echo "Creating backup"
-rm -rf /usr/share/{info,man,doc}/*
-find /usr/{lib,libexec} -name \*.la -delete
-rm -rf /tools
 
 # Exit chroot
 exit
+
+# Exit on error
+check_exit_code
+if [ $exit_status -ne 0 ]
+then
+	stop_script "Stopped in chapter 7, post chroot"
+fi
 
 # Unmount virtual filesystems
 umount $LFS/dev/pts

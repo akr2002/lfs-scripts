@@ -74,62 +74,13 @@ fi
 # Chapter 5.2
 # ===========
 echo "Chapter 5"
-echo "Building binutils"
-su - lfs -c "bash $PWD/chapter5/5.2-binutils.sh"
+bash ./chapter5/main.sh
 
 # Exit on error
 check_exit_code
 if [ $exit_status -ne 0 ]
 then
-	stop_script "chapter5/5.2-binutils.sh"
-fi
-
-# Chapter 5.3
-# ===========
-echo "Building gcc"
-su - lfs -c "bash $PWD/chapter5/5.3-gcc.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter5/5.3-gcc.sh"
-fi
-
-# Chapter 5.4
-# ===========
-echo "Building Linux API Headers"
-su - lfs -c "bash $PWD/chapter5/5.4-linux-headers.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter5/5.4-linux-headers.sh"
-fi
-
-# Chapter 5.5
-# ===========
-echo "Building glibc"
-su - lfs -c "bash $PWD/chapter5/5.5-glibc.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter5/5.5-glibc.sh"
-fi
-
-# Chapter 5.6
-# ===========
-echo "Building listdc++"
-su - lfs -c "bash $PWD/chapter5/5.6-libstdc++.sh"
-
-# Exit on error
-check_exit_code
-if [ $exit_status -ne 0 ]
-then
-	stop_script "chapter5/5.6-libstdc++.sh"
+	stop_script "Stopped in chapter 5"
 fi
 
 # Chapter 6.2

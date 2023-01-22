@@ -110,16 +110,6 @@ fi
 # Chapter 7.4
 # ===========
 echo "Entering the Chroot Environment"
-#su -c "bash $PWD/chapter7/7.4-enter-chroot.sh"
-
-# Exit on error
-# check_exit_code
-# if [ $exit_status -ne 0 ]
-# then
-# 	stop_script "chapter7/7.4-enter-chroot.sh"
-# fi
-
-# If I think it is what it is, then it should not be executed as a child script as it would exit chroot. However, I wouldn't know unless I run it. I will keep it commented for now.
 
 chroot "$LFS" /usr/bin/env -i   \
     HOME=/root                  \
@@ -129,8 +119,6 @@ chroot "$LFS" /usr/bin/env -i   \
     /bin/bash --login
 
 PWD=$(pwd)
-
-# I don't think $PWD is important at this point since the chroot will drop us in $LFS, treated as /. We lost the location of this script. Here's hoping the user puts this repo in $LFS/sources. So much for avoiding hardcoded paths...all goes out the window.
 
 export SCRIPT=/sources/lfs-scripts
 
